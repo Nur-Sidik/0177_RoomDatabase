@@ -41,3 +41,10 @@ data class DetailsSiswa(
     val alamat: String = "",
     val telpon: String = ""
 )
+
+fun DetailsSiswa.toSiswa(): Siswa = Siswa(
+    id = id,
+    name = nama,
+    alamat = alamat,
+    telpon = telpon
+)

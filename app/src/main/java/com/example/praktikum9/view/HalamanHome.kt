@@ -79,4 +79,8 @@ fun BodyHome(
     itemSiswa: List<Siswa>,
     modifier: Modifier = Modifier
 ) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier
+    )
 }

@@ -63,5 +63,13 @@ fun HomeScreen(
                 )
             }
         },
-    )
+    ) { innerPadding ->
+        val uiStateSiswa by viewModel.homeUiState.collectAsState()
+        BodyHome(
+            itemSiswa = uiStateSiswa.listSiswa,
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxSize()
+        )
+    }
 }

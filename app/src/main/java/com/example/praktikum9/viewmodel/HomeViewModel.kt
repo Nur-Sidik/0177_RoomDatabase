@@ -10,4 +10,11 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 
 class HomeViewModel(private val repositoriSiswa: RepositoriSiswa) : ViewModel() {
+    val homeUiState: StateFlow<HomeUiState> = repositoriSiswa.getAllSiswaStream()
+        .map { HomeUiState(listSiswa = it) }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(TIMEOUT_MILLIS),
+            initialValue = HomeUiState()
+        )
 }

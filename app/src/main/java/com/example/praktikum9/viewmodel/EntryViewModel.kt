@@ -48,3 +48,8 @@ fun DetailsSiswa.toSiswa(): Siswa = Siswa(
     alamat = alamat,
     telpon = telpon
 )
+
+fun Siswa.toUiStateSiswa(isEntryValid: Boolean = false): UIStateSiswa = UIStateSiswa(
+    detailsSiswa = this.toDetailsSiswa(),
+    isEntryValid = isEntryValid
+)

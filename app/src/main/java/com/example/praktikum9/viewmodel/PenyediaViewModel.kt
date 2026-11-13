@@ -10,5 +10,11 @@ import com.example.praktikum9.AplikasiSiswa
 
 object PenyediaViewModel {
     val Factory = viewModelFactory {
+        initializer {
+            HomeViewModel(aplikasiSiswa().container.repositoriSiswa)
+        }
+        initializer {
+            EntryViewModel(aplikasiSiswa().container.repositoriSiswa)
+        }
     }
 }

@@ -73,3 +73,10 @@ fun HomeScreen(
         )
     }
 }
+
+@Composable
+fun BodyHome(
+    itemSiswa: List<Siswa>,
+    modifier: Modifier = Modifier
+) {
+}

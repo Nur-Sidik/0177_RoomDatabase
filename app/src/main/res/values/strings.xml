@@ -7,5 +7,6 @@
     <string name="telepon">Telepon siswa</string>
     <string name="nama1">Nama Siswa</string>
     <string name="telepon1">Telepon Siswa"</string>
-
+    <string name="required_field">* Required Fields</string>
+    <string name="btn_submit">Submit</string>
 </resources>
